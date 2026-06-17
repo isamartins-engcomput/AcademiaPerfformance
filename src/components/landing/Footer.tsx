@@ -36,7 +36,6 @@ export function Footer() {
               {[
                 { l: "Início", h: "#inicio" },
                 { l: "Estrutura", h: "#estrutura" },
-                { l: "Modalidade", h: "#modalidade" },
                 { l: "Horários", h: "#horarios" },
                 { l: "Planos", h: "#planos" },
               ].map((item) => (
