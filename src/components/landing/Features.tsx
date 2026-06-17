@@ -4,7 +4,7 @@ const features = [
   {
     icon: Dumbbell,
     title: "Equipamentos Essenciais",
-    desc: "Equipamentos básicos e essenciais para o seu treino de musculação.",
+    desc: "Equipamentos essenciais para o seu treino de musculação.",
   },
   {
     icon: HeartHandshake,
@@ -14,7 +14,7 @@ const features = [
   {
     icon: Users,
     title: "Academia de Bairro",
-    desc: "Ambiente simples e focado no que importa: a musculação. Sem frescura, com a vizinhança treinando junto.",
+    desc: "Ambiente focado no que importa de verdade: a musculação.",
   },
 ];
 

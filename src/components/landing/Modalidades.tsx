@@ -10,7 +10,7 @@ const highlights = [
   {
     icon: Dumbbell,
     title: "Maquinário Essencial",
-    desc: "Equipamentos básicos para trabalhar os principais grupos musculares.",
+    desc: "Equipamentos para trabalhar os principais grupos musculares.",
   },
   {
     icon: Users,
