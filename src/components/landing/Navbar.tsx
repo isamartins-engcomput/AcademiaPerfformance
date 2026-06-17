@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-perfformance.png.asset.json";
 
 const links = [
   { href: "#inicio", label: "Início" },
   { href: "#estrutura", label: "Estrutura" },
-  { href: "#modalidades", label: "Modalidades" },
+  { href: "#modalidade", label: "Modalidade" },
+  { href: "#horarios", label: "Horários" },
   { href: "#planos", label: "Planos" },
 ];
 
@@ -29,13 +30,11 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#inicio" className="flex items-center gap-3 group">
-          <div className="h-11 w-11 overflow-hidden rounded-md ring-1 ring-white/10 shadow-brand">
-            <img src={logo} alt="Academia Perfformance" className="h-full w-full object-cover" />
-          </div>
-          <div className="leading-none">
-            <div className="text-display text-base text-white">Academia</div>
-            <div className="text-display text-sm text-brand-blue -mt-0.5">Perfformance</div>
-          </div>
+          <img
+            src={logo.url}
+            alt="Academia Perfformance"
+            className="h-14 w-auto md:h-16 drop-shadow-[0_4px_12px_rgba(220,38,38,0.35)] transition-transform group-hover:scale-105"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

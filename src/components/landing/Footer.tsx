@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo-perfformance.png.asset.json";
 import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 
 export function Footer() {
@@ -7,18 +7,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 overflow-hidden rounded-md ring-1 ring-white/10">
-                <img src={logo} alt="Logo" className="h-full w-full object-cover" />
-              </div>
-              <div>
-                <div className="text-display text-lg text-white">Academia Perfformance</div>
-                <div className="text-xs uppercase tracking-[0.2em] text-brand-red">Treine. Supere. Repita.</div>
-              </div>
-            </div>
-            <p className="mt-5 max-w-md text-sm text-white/55">
-              Mais que uma academia, um ecossistema de alta performance criado para
-              quem busca evolução real, todos os dias.
+            <img
+              src={logo.url}
+              alt="Academia Perfformance"
+              className="h-20 w-auto drop-shadow-[0_4px_18px_rgba(220,38,38,0.4)]"
+            />
+            <p className="mt-6 max-w-md text-sm text-white/55">
+              Academia de bairro focada em musculação. Estrutura honesta, suporte
+              de salão e preço justo para você treinar todo dia.
             </p>
             <div className="mt-6 flex gap-3">
               {[Instagram, Facebook, Youtube].map((Icon, i) => (
@@ -37,10 +33,16 @@ export function Footer() {
           <div>
             <h4 className="text-display text-sm uppercase tracking-widest text-white">Navegação</h4>
             <ul className="mt-5 space-y-3 text-sm">
-              {["Início", "Estrutura", "Modalidades", "Planos"].map((l) => (
-                <li key={l}>
-                  <a href={`#${l.toLowerCase()}`} className="text-white/60 hover:text-brand-red transition-colors">
-                    {l}
+              {[
+                { l: "Início", h: "#inicio" },
+                { l: "Estrutura", h: "#estrutura" },
+                { l: "Modalidade", h: "#modalidade" },
+                { l: "Horários", h: "#horarios" },
+                { l: "Planos", h: "#planos" },
+              ].map((item) => (
+                <li key={item.h}>
+                  <a href={item.h} className="text-white/60 hover:text-brand-red transition-colors">
+                    {item.l}
                   </a>
                 </li>
               ))}
@@ -66,13 +68,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row">
-          <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Academia Perfformance. Todos os direitos reservados.
-          </p>
-          <p className="text-xs uppercase tracking-[0.25em] text-white/40">
-            Forjados no <span className="text-brand-red">ferro</span>.
-          </p>
+        <div className="mt-16 flex flex-col items-center gap-6 border-t border-white/5 pt-10 text-center">
+          <img
+            src={logo.url}
+            alt="Academia Perfformance"
+            className="h-16 w-auto opacity-90"
+          />
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-6">
+            <p className="text-xs text-white/40">
+              © {new Date().getFullYear()} Academia Perfformance. Todos os direitos reservados.
+            </p>
+            <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+              Forjados no <span className="text-brand-red">ferro</span>.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

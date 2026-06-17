@@ -1,35 +1,35 @@
-import { Dumbbell, Snowflake, Users, Zap, Clock, ShieldCheck } from "lucide-react";
+import { Dumbbell, Snowflake, Users, Zap, HeartHandshake, ShieldCheck } from "lucide-react";
 
 const features = [
   {
     icon: Dumbbell,
-    title: "Equipamentos Premium",
-    desc: "Maquinário de última geração de marcas líderes mundiais para cada grupo muscular.",
+    title: "Equipamentos Completos",
+    desc: "Peso livre, anilhas, halteres e maquinário para trabalhar todos os grupos musculares.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Suporte Integral",
+    desc: "Instrutores de salão capacitados e sempre disponíveis para auxiliar você durante todo o horário de funcionamento.",
   },
   {
     icon: Snowflake,
     title: "Ambiente Climatizado",
-    desc: "Ar-condicionado em todo o espaço para você treinar com conforto absoluto, todos os dias.",
-  },
-  {
-    icon: Users,
-    title: "Profissionais Qualificados",
-    desc: "Equipe técnica certificada acompanhando cada série, evolução e detalhe do seu treino.",
+    desc: "Ar-condicionado em todo o espaço para você treinar com conforto, mesmo nos dias mais quentes.",
   },
   {
     icon: Zap,
-    title: "Treinos de Alta Intensidade",
-    desc: "Metodologias comprovadas para maximizar resultados em menos tempo de execução.",
+    title: "Foco em Musculação",
+    desc: "Especialistas em treinos de força e hipertrofia, sem firulas. Aqui é peso, técnica e evolução.",
   },
   {
-    icon: Clock,
-    title: "Horário Estendido",
-    desc: "Aberto das 5h às 23h durante a semana. Treine no seu ritmo, na sua hora.",
+    icon: Users,
+    title: "Academia de Bairro",
+    desc: "Atendimento próximo, ambiente familiar e a vizinhança treinando junto com você.",
   },
   {
     icon: ShieldCheck,
-    title: "Segurança Total",
-    desc: "Espaço monitorado, vestiários privativos e protocolos de higiene rigorosos.",
+    title: "Espaço Seguro",
+    desc: "Ambiente organizado, equipamentos revisados e protocolos de higiene para você focar só no treino.",
   },
 ];
 
@@ -42,11 +42,11 @@ export function Features() {
             Por que Perfformance
           </div>
           <h2 className="mt-4 text-display text-4xl text-white md:text-6xl">
-            Tudo que você precisa para{" "}
-            <span className="text-brand-red">evoluir</span>.
+            Academia honesta para{" "}
+            <span className="text-brand-red">treinar de verdade</span>.
           </h2>
           <p className="mt-5 text-lg text-white/65">
-            Nós cuidamos da estrutura. Você cuida da intensidade.
+            Sem promessas vazias. Estrutura, equipamento e suporte para você evoluir todo dia.
           </p>
         </div>
 
