@@ -13,8 +13,8 @@ export function Footer() {
               className="h-20 w-auto drop-shadow-[0_4px_18px_rgba(220,38,38,0.4)]"
             />
             <p className="mt-6 max-w-md text-sm text-white/55">
-              Academia de bairro focada em musculação. Estrutura honesta, suporte
-              de salão e preço justo para você treinar todo dia.
+              Treine musculação de verdade em um ambiente dedicado à sua evolução
+              diária, com mensalidades que cabem no seu bolso.
             </p>
             <div className="mt-6 flex gap-3">
               {[Instagram, Facebook, Youtube].map((Icon, i) => (
