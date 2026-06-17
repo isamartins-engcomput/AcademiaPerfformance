@@ -1,43 +1,48 @@
-import { Check } from "lucide-react";
+import { Check, Calendar, CalendarDays, Users, CalendarClock, Sun } from "lucide-react";
 
-const plans = [
+const mainPlan = {
+  name: "Plano Mensal",
+  price: "99,90",
+  period: "/mês",
+  desc: "Nosso plano padrão. Acesso livre durante todos os horários de funcionamento.",
+  features: [
+    "Acesso à musculação",
+    "Auxílio dos instrutores no salão",
+    "Sem fidelidade",
+  ],
+  cta: "Matricule-se",
+};
+
+const otherPlans = [
   {
-    name: "Start",
-    price: "99",
-    period: "/mês",
-    desc: "Para quem está começando a jornada.",
-    features: ["Acesso à musculação", "Avaliação física inicial", "Horário comercial", "App de treinos"],
-    cta: "Quero começar",
-    highlight: false,
+    icon: CalendarDays,
+    name: "Plano Trimestral",
+    price: "R$ XX,XX",
+    desc: "3 meses com desconto à vista.",
   },
   {
-    name: "Performance",
-    price: "149",
-    period: "/mês",
-    desc: "Nosso plano mais escolhido.",
-    features: [
-      "Acesso total à academia",
-      "Todas as modalidades inclusas",
-      "Acesso 24/7",
-      "Acompanhamento mensal",
-      "App + plano nutricional",
-    ],
-    cta: "Matricule-se",
-    highlight: true,
+    icon: Calendar,
+    name: "3x na Semana",
+    price: "R$ XX,XX",
+    desc: "Para quem treina dias alternados.",
   },
   {
-    name: "Elite",
-    price: "249",
-    period: "/mês",
-    desc: "Para quem quer o máximo.",
-    features: [
-      "Tudo do Performance",
-      "Personal trainer 2x semana",
-      "Sala VIP e vestiário privativo",
-      "Recovery & massagem",
-    ],
-    cta: "Falar com consultor",
-    highlight: false,
+    icon: Users,
+    name: "Plano Casal",
+    price: "R$ XX,XX",
+    desc: "Duas matrículas, valor reduzido.",
+  },
+  {
+    icon: CalendarClock,
+    name: "Plano Semanal",
+    price: "R$ XX,XX",
+    desc: "Acesso liberado por 7 dias.",
+  },
+  {
+    icon: Sun,
+    name: "Diária",
+    price: "R$ XX,XX",
+    desc: "Treine por um dia sem compromisso.",
   },
 ];
 
@@ -48,71 +53,88 @@ export function Planos() {
       <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="reveal mx-auto max-w-2xl text-center">
           <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-brand-blue">
-            Planos
+            Planos & Mensalidades
           </div>
           <h2 className="mt-4 text-display text-4xl text-white md:text-6xl">
-            Invista em você.{" "}
-            <span className="text-brand-red">Sem desculpas</span>.
+            Preço justo.{" "}
+            <span className="text-brand-red">Treino de verdade</span>.
           </h2>
           <p className="mt-5 text-white/60">
-            Planos flexíveis para todos os perfis. Cancele quando quiser.
+            Escolha o formato que se encaixa na sua rotina e comece hoje mesmo.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {plans.map((p, i) => (
-            <div
-              key={p.name}
-              className={`reveal relative flex flex-col rounded-2xl p-8 ring-1 transition-all hover:-translate-y-1 ${
-                p.highlight
-                  ? "bg-gradient-to-br from-brand-red to-brand-red-hot ring-brand-red shadow-brand md:scale-105"
-                  : "bg-surface-2 ring-white/10"
-              }`}
-              style={{ transitionDelay: `${i * 80}ms` }}
-            >
-              {p.highlight && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-blue px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
-                  Mais escolhido
+        {/* Destaque do plano mensal */}
+        <div className="reveal mt-16 mx-auto max-w-2xl">
+          <div className="relative rounded-3xl bg-gradient-to-br from-brand-red to-brand-red-hot p-8 md:p-10 ring-1 ring-brand-red shadow-brand">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-blue px-4 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white">
+              Mais escolhido
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              <div>
+                <div className="text-display text-3xl text-white">{mainPlan.name}</div>
+                <p className="mt-2 text-sm text-white/85">{mainPlan.desc}</p>
+                <div className="mt-6 flex items-baseline gap-1">
+                  <span className="text-base text-white/80">R$</span>
+                  <span className="text-display text-6xl text-white md:text-7xl">{mainPlan.price}</span>
+                  <span className="text-white/80">{mainPlan.period}</span>
                 </div>
-              )}
-              <div className={`text-display text-2xl ${p.highlight ? "text-white" : "text-white"}`}>
-                {p.name}
-              </div>
-              <p className={`mt-2 text-sm ${p.highlight ? "text-white/80" : "text-white/60"}`}>
-                {p.desc}
-              </p>
-              <div className="mt-6 flex items-baseline gap-1">
-                <span className={`text-sm ${p.highlight ? "text-white/80" : "text-white/60"}`}>R$</span>
-                <span className="text-display text-6xl text-white">{p.price}</span>
-                <span className={`${p.highlight ? "text-white/80" : "text-white/60"}`}>{p.period}</span>
+                <a
+                  href="#"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-white px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-red transition-all hover:scale-105 hover:bg-white/90 md:w-auto"
+                >
+                  {mainPlan.cta}
+                </a>
               </div>
 
-              <ul className="mt-8 space-y-3">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm">
-                    <Check
-                      className={`mt-0.5 h-4 w-4 shrink-0 ${
-                        p.highlight ? "text-white" : "text-brand-red"
-                      }`}
-                      strokeWidth={3}
-                    />
-                    <span className={p.highlight ? "text-white/90" : "text-white/75"}>{f}</span>
+              <ul className="space-y-3 md:border-l md:border-white/20 md:pl-8">
+                {mainPlan.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-sm text-white/95">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-white" strokeWidth={3} />
+                    <span>{f}</span>
                   </li>
                 ))}
               </ul>
-
-              <a
-                href="#"
-                className={`mt-10 inline-flex items-center justify-center rounded-md px-5 py-3.5 text-sm font-bold uppercase tracking-wider transition-all hover:scale-105 ${
-                  p.highlight
-                    ? "bg-white text-brand-red hover:bg-white/90"
-                    : "bg-brand-red text-white hover:bg-brand-red-hot"
-                }`}
-              >
-                {p.cta}
-              </a>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Outras opções */}
+        <div className="reveal mt-16">
+          <h3 className="text-display text-2xl text-white md:text-3xl">
+            Outras opções <span className="text-brand-blue">disponíveis</span>
+          </h3>
+          <p className="mt-2 text-sm text-white/60">
+            Formatos alternativos para quem precisa de mais flexibilidade.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {otherPlans.map((p, i) => (
+              <div
+                key={p.name}
+                className="reveal group flex items-start gap-4 rounded-2xl bg-surface-2 p-6 ring-1 ring-white/10 transition-all hover:-translate-y-1 hover:ring-brand-red/40"
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-red/15 text-brand-red ring-1 ring-brand-red/30 transition-all group-hover:bg-brand-red group-hover:text-white">
+                  <p.icon className="h-5 w-5" strokeWidth={2.25} />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <div className="text-display text-lg text-white">{p.name}</div>
+                    <div className="text-display text-lg text-brand-red whitespace-nowrap">
+                      {p.price}
+                    </div>
+                  </div>
+                  <p className="mt-1 text-xs text-white/60">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-xs uppercase tracking-[0.25em] text-white/40">
+            Consulte valores atualizados na recepção.
+          </p>
         </div>
       </div>
     </section>

@@ -1,28 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
-import { Features } from "@/components/landing/Features";
-import { Modalidades } from "@/components/landing/Modalidades";
+import { Estrutura } from "@/components/landing/Estrutura";
+import { Horarios } from "@/components/landing/Horarios";
 import { Planos } from "@/components/landing/Planos";
 import { Footer } from "@/components/landing/Footer";
 import { useReveal } from "@/hooks/use-reveal";
+import logo from "@/assets/logoacad-removebg-preview.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Academia Perfformance — A sua melhor performance começa aqui" },
+      { title: "Academia Perfformance — Musculação no seu bairro" },
       {
         name: "description",
         content:
-          "Academia Perfformance: estrutura premium, equipe especializada e modalidades para todos os níveis. Matricule-se e supere seus limites.",
+          "Academia Perfformance: musculação com peso livre e maquinário, suporte de instrutores de salão e preço justo. Plano mensal R$ 99,90.",
       },
       { property: "og:title", content: "Academia Perfformance" },
       {
         property: "og:description",
-        content: "Treine com propósito. Estrutura, equipe e energia para sua melhor performance.",
+        content: "Musculação honesta, suporte integral e preço acessível. Treine no seu bairro.",
       },
+      { property: "og:image", content: logo.url },
     ],
     links: [
+      { rel: "icon", type: "image/png", href: logo.url },
+      { rel: "shortcut icon", type: "image/png", href: logo.url },
+      { rel: "apple-touch-icon", href: logo.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -40,8 +45,8 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <Features />
-      <Modalidades />
+      <Estrutura />
+      <Horarios />
       <Planos />
       <Footer />
     </main>
