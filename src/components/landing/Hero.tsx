@@ -27,16 +27,10 @@ export function Hero() {
 
           <h1 className="mt-6 text-display text-5xl leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl uppercase">
             A sua melhor{" "}
-<<<<<<< HEAD
-            <span className="bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
-              perfformance&nbsp;
-            </span>{" "}
-=======
             <span className="inline-block pr-2 bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
-              PERFFORMANCE&nbsp;&nbsp;
+              PERFFORMANCE
             </span>
             <br />
->>>>>>> lovable/main
             começa aqui.
           </h1>
 
