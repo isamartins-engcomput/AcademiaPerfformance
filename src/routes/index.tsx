@@ -6,7 +6,7 @@ import { Horarios } from "@/components/landing/Horarios";
 import { Planos } from "@/components/landing/Planos";
 import { Footer } from "@/components/landing/Footer";
 import { useReveal } from "@/hooks/use-reveal";
-import logo from "@/assets/logo-perfformance.png.asset.json";
+import logo from "@/assets/logoacad-removebg-preview.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
