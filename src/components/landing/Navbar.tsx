@@ -4,7 +4,6 @@ import logo from "@/assets/logo-perfformance.png.asset.json";
 const links = [
   { href: "#inicio", label: "Início" },
   { href: "#estrutura", label: "Estrutura" },
-  { href: "#modalidade", label: "Modalidade" },
   { href: "#horarios", label: "Horários" },
   { href: "#planos", label: "Planos" },
 ];

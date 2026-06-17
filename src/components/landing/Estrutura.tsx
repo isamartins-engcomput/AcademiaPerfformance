@@ -3,36 +3,38 @@ import { Dumbbell, Users, Weight } from "lucide-react";
 
 const highlights = [
   {
-    icon: Weight,
-    title: "Peso Livre",
-    desc: "Halteres, anilhas e barras para os treinos clássicos de musculação.",
+    icon: Dumbbell,
+    title: "Maquinário Robusto",
+    desc: "Equipamentos selecionados para o seu treino.",
   },
   {
-    icon: Dumbbell,
-    title: "Maquinário Essencial",
-    desc: "Equipamentos para trabalhar os principais grupos musculares.",
+    icon: Weight,
+    title: "Zona de Peso Livre",
+    desc: "Halteres e anilhas para quem treina pesado.",
   },
   {
     icon: Users,
-    title: "Auxílio no Salão",
-    desc: "Instrutores no salão para te ajudar durante o treino, sempre que precisar.",
+    title: "Suporte no Salão",
+    desc: "Instrutores capacitados acompanhando sua evolução de perto.",
   },
 ];
 
-export function Modalidades() {
+export function Estrutura() {
   return (
-    <section id="modalidade" className="relative bg-background py-24 md:py-32">
+    <section id="estrutura" className="relative bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="reveal max-w-2xl">
+        <div className="reveal max-w-3xl">
           <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-brand-red">
-            Modalidade
+            Cultura de Treino Levada a Sério
           </div>
-          <h2 className="mt-4 text-display text-4xl text-white md:text-6xl">
+          <h2 className="mt-4 text-display text-4xl text-white md:text-6xl uppercase">
             Musculação.{" "}
-            <span className="text-brand-blue">Pura e simples</span>.
+            <span className="text-brand-blue">Pura e focada</span>.
           </h2>
-          <p className="mt-5 text-lg text-white/65">
-            Aqui não tem enrolação. O foco é um só: peso livre, maquinário e a sua evolução.
+          <p className="mt-5 text-lg text-white/70">
+            Sem distrações. Aqui o foco é 100% na sua evolução, com peso livre
+            de verdade, maquinário de alta performance e suporte técnico no
+            salão para corrigir a sua execução.
           </p>
         </div>
 
@@ -49,15 +51,11 @@ export function Modalidades() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-8">
               <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-red">
-                Peso livre · Maquinário · Treino
+                Peso livre · Maquinário · Treino pesado
               </div>
               <h3 className="mt-3 text-display text-4xl text-white md:text-5xl">
-                Musculação
+                Estrutura Completa de Força
               </h3>
-              <p className="mt-3 max-w-xl text-sm text-white/70 md:text-base">
-                Ambiente simples e focado no que importa: a musculação. Treine
-                no seu ritmo, com o auxílio dos instrutores no salão.
-              </p>
             </div>
           </div>
 
@@ -73,7 +71,7 @@ export function Modalidades() {
                 </div>
                 <div>
                   <h4 className="text-display text-xl text-white">{h.title}</h4>
-                  <p className="mt-1.5 text-sm text-white/60">{h.desc}</p>
+                  <p className="mt-1.5 text-sm text-white/65">{h.desc}</p>
                 </div>
               </div>
             ))}
