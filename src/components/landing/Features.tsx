@@ -1,35 +1,20 @@
-import { Dumbbell, Snowflake, Users, Zap, HeartHandshake, ShieldCheck } from "lucide-react";
+import { Dumbbell, Users, HeartHandshake } from "lucide-react";
 
 const features = [
   {
     icon: Dumbbell,
-    title: "Equipamentos Completos",
-    desc: "Peso livre, anilhas, halteres e maquinário para trabalhar todos os grupos musculares.",
+    title: "Equipamentos Essenciais",
+    desc: "Equipamentos básicos e essenciais para o seu treino de musculação.",
   },
   {
     icon: HeartHandshake,
-    title: "Suporte Integral",
-    desc: "Instrutores de salão capacitados e sempre disponíveis para auxiliar você durante todo o horário de funcionamento.",
-  },
-  {
-    icon: Snowflake,
-    title: "Ambiente Climatizado",
-    desc: "Ar-condicionado em todo o espaço para você treinar com conforto, mesmo nos dias mais quentes.",
-  },
-  {
-    icon: Zap,
-    title: "Foco em Musculação",
-    desc: "Especialistas em treinos de força e hipertrofia, sem firulas. Aqui é peso, técnica e evolução.",
+    title: "Auxílio no Salão",
+    desc: "Instrutores no salão para te auxiliar durante o treino, tirar dúvidas e ajustar a execução.",
   },
   {
     icon: Users,
     title: "Academia de Bairro",
-    desc: "Atendimento próximo, ambiente familiar e a vizinhança treinando junto com você.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Espaço Seguro",
-    desc: "Ambiente organizado, equipamentos revisados e protocolos de higiene para você focar só no treino.",
+    desc: "Ambiente simples e focado no que importa: a musculação. Sem frescura, com a vizinhança treinando junto.",
   },
 ];
 
@@ -46,7 +31,7 @@ export function Features() {
             <span className="text-brand-red">treinar de verdade</span>.
           </h2>
           <p className="mt-5 text-lg text-white/65">
-            Sem promessas vazias. Estrutura, equipamento e suporte para você evoluir todo dia.
+            Sem promessas vazias. O básico bem-feito para você focar na musculação.
           </p>
         </div>
 

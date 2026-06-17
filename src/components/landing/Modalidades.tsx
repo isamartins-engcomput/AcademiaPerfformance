@@ -1,21 +1,21 @@
 import muscImg from "@/assets/musculacao-hero.jpg";
-import { Dumbbell, Activity, Weight } from "lucide-react";
+import { Dumbbell, Users, Weight } from "lucide-react";
 
 const highlights = [
   {
     icon: Weight,
     title: "Peso Livre",
-    desc: "Barras olímpicas, halteres, anilhas e racks para os treinos mais clássicos e eficientes.",
+    desc: "Halteres, anilhas e barras para os treinos clássicos de musculação.",
   },
   {
     icon: Dumbbell,
-    title: "Maquinário Completo",
-    desc: "Equipamentos para cada grupo muscular: peito, costas, ombros, pernas, braços e core.",
+    title: "Maquinário Essencial",
+    desc: "Equipamentos básicos para trabalhar os principais grupos musculares.",
   },
   {
-    icon: Activity,
-    title: "Treinos para Todos",
-    desc: "Iniciante ou avançado, montamos sua ficha e acompanhamos sua evolução no salão.",
+    icon: Users,
+    title: "Auxílio no Salão",
+    desc: "Instrutores no salão para te ajudar durante o treino, sempre que precisar.",
   },
 ];
 
@@ -49,14 +49,14 @@ export function Modalidades() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-8">
               <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-red">
-                Hipertrofia · Força · Resistência
+                Peso livre · Maquinário · Treino
               </div>
               <h3 className="mt-3 text-display text-4xl text-white md:text-5xl">
                 Musculação
               </h3>
               <p className="mt-3 max-w-xl text-sm text-white/70 md:text-base">
-                Sala ampla com peso livre e maquinário de qualidade. Treine com técnica,
-                no seu ritmo, com suporte do nosso time de salão.
+                Ambiente simples e focado no que importa: a musculação. Treine
+                no seu ritmo, com o auxílio dos instrutores no salão.
               </p>
             </div>
           </div>
