@@ -1,4 +1,4 @@
-import logo from "@/assets/logoacad-removebg-preview.png.asset.json";
+import logoAcademia from "@/assets/logoacad-removebg-preview.png";
 import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <img
-              src={logo.url}
+              src={logoAcademia}
               alt="Academia Perfformance"
               className="h-20 w-auto drop-shadow-[0_4px_18px_rgba(220,38,38,0.4)]"
             />
@@ -69,7 +69,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center gap-6 border-t border-white/5 pt-10 text-center">
           <img
-            src={logo.url}
+            src={logoAcademia}
             alt="Academia Perfformance"
             className="h-16 w-auto opacity-90"
           />

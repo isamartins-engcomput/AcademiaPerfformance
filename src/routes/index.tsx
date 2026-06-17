@@ -6,7 +6,7 @@ import { Horarios } from "@/components/landing/Horarios";
 import { Planos } from "@/components/landing/Planos";
 import { Footer } from "@/components/landing/Footer";
 import { useReveal } from "@/hooks/use-reveal";
-import logo from "@/assets/logoacad-removebg-preview.png.asset.json";
+import logoAcademia from "@/assets/logoacad-removebg-preview.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,12 +22,12 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Musculação honesta, suporte integral e preço acessível. Treine no seu bairro.",
       },
-      { property: "og:image", content: logo.url },
+      { property: "og:image", content: logoAcademia },
     ],
     links: [
-      { rel: "icon", type: "image/png", href: logo.url },
-      { rel: "shortcut icon", type: "image/png", href: logo.url },
-      { rel: "apple-touch-icon", href: logo.url },
+      { rel: "icon", type: "image/png", href: logoAcademia },
+      { rel: "shortcut icon", type: "image/png", href: logoAcademia },
+      { rel: "apple-touch-icon", href: logoAcademia },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

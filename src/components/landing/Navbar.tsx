@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/logoacad-removebg-preview.png.asset.json";
+import logoAcademia from "@/assets/logoacad-removebg-preview.png";
 
 const links = [
   { href: "#inicio", label: "Início" },
@@ -30,7 +30,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#inicio" className="flex items-center gap-3 group">
           <img
-            src={logo.url}
+            src={logoAcademia}
             alt="Academia Perfformance"
             className="h-14 w-auto md:h-16 drop-shadow-[0_4px_12px_rgba(220,38,38,0.35)] transition-transform group-hover:scale-105"
           />
