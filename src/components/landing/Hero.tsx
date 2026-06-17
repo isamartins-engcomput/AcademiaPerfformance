@@ -27,9 +27,10 @@ export function Hero() {
 
           <h1 className="mt-6 text-display text-5xl leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl">
             A sua melhor{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 italic font-black inline-block pr-2">
-              PERFFORMANCE
+            <span className="inline-block pr-2 bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
+              perfformance
             </span>
+            <br />
             começa aqui.
           </h1>
 
