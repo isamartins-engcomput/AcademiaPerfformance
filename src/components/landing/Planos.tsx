@@ -7,8 +7,7 @@ const mainPlan = {
   desc: "Nosso plano padrão. Acesso livre durante todos os horários de funcionamento.",
   features: [
     "Acesso à musculação",
-    "Suporte dos instrutores de salão",
-    "Ambiente climatizado",
+    "Auxílio dos instrutores no salão",
     "Sem fidelidade",
   ],
   cta: "Matricule-se",
