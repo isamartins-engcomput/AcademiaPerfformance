@@ -25,7 +25,7 @@ export function Hero() {
             Treine com propósito
           </div>
 
-          <h1 className="mt-6 text-display text-5xl leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="mt-6 text-display text-5xl leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl uppercase">
             A sua melhor{" "}
             <span className="inline-block pr-2 bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
               perfformance
@@ -35,9 +35,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-white/70 md:text-xl">
-            O maquinário essencial para o seu treino de musculação em um ambiente
-            sem frescura. Preço justo e o suporte que você precisa no salão.
-            Bem-vindo à Academia Perfformance.
+            O maquinário essencial para o seu treino de musculação. Preço justo e
+            o suporte que você precisa no salão. Bem-vindo à Academia
+            Perfformance.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
