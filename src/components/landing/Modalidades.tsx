@@ -1,66 +1,83 @@
-import musc from "@/assets/mod-musculacao.jpg";
-import cross from "@/assets/mod-crossfit.jpg";
-import cardio from "@/assets/mod-cardio.jpg";
-import func from "@/assets/mod-funcional.jpg";
-import { ArrowUpRight } from "lucide-react";
+import muscImg from "@/assets/musculacao-hero.jpg";
+import { Dumbbell, Activity, Weight } from "lucide-react";
 
-const items = [
-  { img: musc, title: "Musculação", tag: "Hipertrofia & Força", span: "lg:row-span-2" },
-  { img: cross, title: "CrossTraining", tag: "Alta intensidade" },
-  { img: cardio, title: "Cardio", tag: "Resistência" },
-  { img: func, title: "Funcional", tag: "Mobilidade & Core", span: "lg:col-span-2" },
+const highlights = [
+  {
+    icon: Weight,
+    title: "Peso Livre",
+    desc: "Barras olímpicas, halteres, anilhas e racks para os treinos mais clássicos e eficientes.",
+  },
+  {
+    icon: Dumbbell,
+    title: "Maquinário Completo",
+    desc: "Equipamentos para cada grupo muscular: peito, costas, ombros, pernas, braços e core.",
+  },
+  {
+    icon: Activity,
+    title: "Treinos para Todos",
+    desc: "Iniciante ou avançado, montamos sua ficha e acompanhamos sua evolução no salão.",
+  },
 ];
 
 export function Modalidades() {
   return (
-    <section id="modalidades" className="relative bg-background py-24 md:py-32">
+    <section id="modalidade" className="relative bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="reveal flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-2xl">
-            <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-brand-red">
-              Modalidades
-            </div>
-            <h2 className="mt-4 text-display text-4xl text-white md:text-6xl">
-              Escolha sua arena.{" "}
-              <span className="text-brand-blue">Domine seu jogo</span>.
-            </h2>
+        <div className="reveal max-w-2xl">
+          <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-brand-red">
+            Modalidade
           </div>
-          <p className="max-w-md text-white/60">
-            De aulas explosivas a treinos de força. Mais de 15 modalidades comandadas por especialistas.
+          <h2 className="mt-4 text-display text-4xl text-white md:text-6xl">
+            Musculação.{" "}
+            <span className="text-brand-blue">Pura e simples</span>.
+          </h2>
+          <p className="mt-5 text-lg text-white/65">
+            Aqui não tem enrolação. O foco é um só: peso livre, maquinário e a sua evolução.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[280px]">
-          {items.map((m, i) => (
-            <article
-              key={m.title}
-              className={`reveal group relative overflow-hidden rounded-2xl bg-surface ring-1 ring-white/5 ${m.span ?? ""}`}
-              style={{ transitionDelay: `${i * 80}ms` }}
-            >
-              <img
-                src={m.img}
-                alt={m.title}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-50"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-
-              <div className="absolute inset-x-0 bottom-0 p-6 transition-transform duration-500 group-hover:-translate-y-2">
-                <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-red">
-                  {m.tag}
-                </div>
-                <div className="mt-2 flex items-end justify-between gap-3">
-                  <h3 className="text-display text-3xl text-white md:text-4xl">{m.title}</h3>
-                  <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand-red text-white opacity-0 transition-all duration-500 group-hover:opacity-100">
-                    <ArrowUpRight className="h-5 w-5" />
-                  </div>
-                </div>
-                <p className="mt-3 max-h-0 overflow-hidden text-sm text-white/70 opacity-0 transition-all duration-500 group-hover:max-h-24 group-hover:opacity-100">
-                  Aulas guiadas por instrutores certificados, com planejamento progressivo.
-                </p>
+        <div className="mt-14 grid gap-6 lg:grid-cols-5">
+          <div className="reveal group relative overflow-hidden rounded-2xl ring-1 ring-white/5 lg:col-span-3 min-h-[420px]">
+            <img
+              src={muscImg}
+              alt="Sala de musculação com peso livre e maquinário"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-8">
+              <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-red">
+                Hipertrofia · Força · Resistência
               </div>
-            </article>
-          ))}
+              <h3 className="mt-3 text-display text-4xl text-white md:text-5xl">
+                Musculação
+              </h3>
+              <p className="mt-3 max-w-xl text-sm text-white/70 md:text-base">
+                Sala ampla com peso livre e maquinário de qualidade. Treine com técnica,
+                no seu ritmo, com suporte do nosso time de salão.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 lg:col-span-2">
+            {highlights.map((h, i) => (
+              <div
+                key={h.title}
+                className="reveal group flex gap-5 rounded-2xl bg-surface-2 p-6 ring-1 ring-white/5 transition-colors hover:bg-surface"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-red/15 text-brand-red ring-1 ring-brand-red/30 transition-all group-hover:bg-brand-red group-hover:text-white">
+                  <h.icon className="h-6 w-6" strokeWidth={2.25} />
+                </div>
+                <div>
+                  <h4 className="text-display text-xl text-white">{h.title}</h4>
+                  <p className="mt-1.5 text-sm text-white/60">{h.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
