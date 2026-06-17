@@ -27,15 +27,16 @@ export function Hero() {
 
           <h1 className="mt-6 text-display text-5xl leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl">
             A sua melhor{" "}
-            <span className="bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
+            <span className="inline-block pr-2 bg-gradient-to-r from-brand-red via-brand-red-hot to-brand-blue bg-clip-text text-transparent">
               perfformance
             </span>{" "}
             começa aqui.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-white/70 md:text-xl">
-            Estrutura de ponta, equipe especialista e a energia que você precisa
-            para romper seus limites. Bem-vindo à Academia Perfformance.
+            O maquinário essencial para o seu treino de musculação em um ambiente
+            sem frescura. Preço justo e o suporte que você precisa no salão.
+            Bem-vindo à Academia Perfformance.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -52,20 +53,6 @@ export function Hero() {
             >
               Conheça a Estrutura
             </a>
-          </div>
-
-          {/* Stats strip */}
-          <div className="mt-14 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
-            {[
-              { v: "+2.500", l: "Alunos ativos" },
-              { v: "+15", l: "Modalidades" },
-              { v: "24/7", l: "Acesso premium" },
-            ].map((s) => (
-              <div key={s.l}>
-                <div className="text-display text-3xl text-white md:text-4xl">{s.v}</div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-white/50">{s.l}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
