@@ -1,5 +1,5 @@
 import logoAcademia from "@/assets/logoacad-removebg-preview.png";
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { MapPin, MessageCircle, Facebook, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -17,14 +17,32 @@ export function Footer() {
               diária, com mensalidades que cabem no seu bolso.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+              {[
+                { 
+                  Icon: Facebook, 
+                  href: "https://www.facebook.com/share/18uXdnMAdZ/", 
+                  label: "Facebook" 
+                },
+                { 
+                  Icon: MessageCircle, 
+                  href: "https://wa.me/5518991236821", 
+                  label: "WhatsApp" 
+                },
+                { 
+                  Icon: MapPin, 
+                  href: "https://maps.app.goo.gl/q2YwPxAYhS5mZVAu9?g_st=aw", 
+                  label: "Localização" 
+                }
+              ].map((item, i) => (
                 <a
                   key={i}
-                  href="#"
-                  aria-label="Rede social"
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
                   className="grid h-10 w-10 place-items-center rounded-md border border-white/10 text-white/70 transition-all hover:border-brand-red hover:bg-brand-red hover:text-white hover:scale-110"
                 >
-                  <Icon className="h-4 w-4" />
+                  <item.Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -51,17 +69,9 @@ export function Footer() {
           <div>
             <h4 className="text-display text-sm uppercase tracking-widest text-white">Contato</h4>
             <ul className="mt-5 space-y-4 text-sm">
-              <li className="flex items-start gap-3 text-white/65">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-red" />
-                <span>Av. Brasil, 463 — Zona Sul</span>
-              </li>
               <li className="flex items-center gap-3 text-white/65">
                 <Phone className="h-4 w-4 shrink-0 text-brand-red" />
-                <span>(11) 3742-2720</span>
-              </li>
-              <li className="flex items-center gap-3 text-white/65">
-                <Mail className="h-4 w-4 shrink-0 text-brand-red" />
-                <span>contato@perfformance.com.br</span>
+                <span>(18) 99123-6821</span>
               </li>
             </ul>
           </div>

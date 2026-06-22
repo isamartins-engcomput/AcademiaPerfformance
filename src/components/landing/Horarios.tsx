@@ -35,7 +35,7 @@ export function Horarios() {
             <span className="text-brand-red">sentido pra você</span>.
           </h2>
           <p className="mt-5 text-lg text-white/65">
-            Grade fixa, sem surpresas. Confira nossos horários abaixo.
+            Grade fixa. Confira nossos horários abaixo.
           </p>
         </div>
 

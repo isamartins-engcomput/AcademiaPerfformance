@@ -50,7 +50,9 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <a
-            href="#planos"
+            href="https://wa.me/5518991236821?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20Academia%20Perfformance%21"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-md bg-brand-red px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-brand transition-all hover:bg-brand-red-hot hover:scale-105"
           >
             Matricule-se
@@ -80,7 +82,9 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#planos"
+              href="https://wa.me/5518991236821?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20Academia%20Perfformance%21"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-brand-red px-3 py-3 text-center text-sm font-bold uppercase tracking-wider text-white"
             >

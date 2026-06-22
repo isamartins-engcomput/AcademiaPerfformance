@@ -42,7 +42,9 @@ export function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#planos"
+              href="https://wa.me/5518991236821?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20Academia%20Perfformance%21"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-brand transition-all hover:bg-brand-red-hot hover:scale-105"
             >
               Começar Agora

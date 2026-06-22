@@ -2,13 +2,13 @@ import { Check, Calendar, CalendarDays, Users, CalendarClock, Sun } from "lucide
 
 const mainPlan = {
   name: "Plano Mensal",
-  price: "99,90",
+  price: "99,00",
   period: "/mês",
-  desc: "Nosso plano padrão. Acesso livre durante todos os horários de funcionamento.",
+  desc: "Nosso plano padrão. Acesso livre durante todos os dias e horários de funcionamento.",
   features: [
     "Acesso à musculação",
     "Auxílio dos instrutores no salão",
-    "Sem fidelidade",
+    "Desconto para pagamento à vista: R$ 95,00/mês",
   ],
   cta: "Matricule-se",
 };
@@ -17,31 +17,31 @@ const otherPlans = [
   {
     icon: CalendarDays,
     name: "Plano Trimestral",
-    price: "R$ XX,XX",
-    desc: "3 meses com desconto à vista.",
+    price: "R$ 270,00",
+    desc: "R$ 260,00/mês em pagamento à vista. Economize e treine sem preocupações por 3 meses.",
   },
   {
     icon: Calendar,
     name: "3x na Semana",
-    price: "R$ XX,XX",
+    price: "R$ 85,00",
     desc: "Para quem treina dias alternados.",
   },
   {
     icon: Users,
     name: "Plano Casal",
-    price: "R$ XX,XX",
-    desc: "Duas matrículas, valor reduzido.",
+    price: "R$ 180,00",
+    desc: "R$ 170,00/mês em pagamento à vista. Duas matrículas, valor reduzido.",
   },
   {
     icon: CalendarClock,
     name: "Plano Semanal",
-    price: "R$ XX,XX",
-    desc: "Acesso liberado por 7 dias.",
+    price: "R$ 50,00",
+    desc: "Acesso liberado por 5 dias.",
   },
   {
     icon: Sun,
     name: "Diária",
-    price: "R$ XX,XX",
+    price: "R$ 20,00",
     desc: "Treine por um dia sem compromisso.",
   },
 ];
@@ -65,6 +65,7 @@ export function Planos() {
         </div>
 
         {/* Destaque do plano mensal */}
+        {/* Destaque do plano mensal */}
         <div className="reveal mt-16 mx-auto max-w-2xl">
           <div className="relative rounded-3xl bg-gradient-to-br from-brand-red to-brand-red-hot p-8 md:p-10 ring-1 ring-brand-red shadow-brand">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-blue px-4 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white">
@@ -72,6 +73,7 @@ export function Planos() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              {/* COLUNA 1: Textos e Preços */}
               <div>
                 <div className="text-display text-3xl text-white">{mainPlan.name}</div>
                 <p className="mt-2 text-sm text-white/85">{mainPlan.desc}</p>
@@ -80,22 +82,31 @@ export function Planos() {
                   <span className="text-display text-6xl text-white md:text-7xl">{mainPlan.price}</span>
                   <span className="text-white/80">{mainPlan.period}</span>
                 </div>
-                <a
-                  href="#"
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-md bg-white px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-red transition-all hover:scale-105 hover:bg-white/90 md:w-auto"
-                >
-                  {mainPlan.cta}
-                </a>
               </div>
 
-              <ul className="space-y-3 md:border-l md:border-white/20 md:pl-8">
-                {mainPlan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm text-white/95">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-white" strokeWidth={3} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* COLUNA 2: Lista de Vantagens e Botão */}
+              <div className="flex flex-col md:border-l md:border-white/20 md:pl-8">
+                <ul className="space-y-3">
+                  {mainPlan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-white/95">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-white" strokeWidth={3} />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Botão alinhado à direita */}
+                <div className="mt-8 flex md:justify-center">
+                  <a
+                    href="https://wa.me/5518991236821?text=Ol%C3%A1%2C%20gostaria%20de%20me%20matricular%20na%20Academia%20Perfformance%21"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center rounded-md bg-white px-6 py-4 text-sm font-bold uppercase tracking-wider text-brand-red transition-all hover:scale-105 hover:bg-white/90 md:w-auto"
+                  >
+                    {mainPlan.cta}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -133,7 +144,7 @@ export function Planos() {
           </div>
 
           <p className="mt-8 text-center text-xs uppercase tracking-[0.25em] text-white/40">
-            Consulte valores atualizados na recepção.
+            Obtenha mais informações atualizados entrando em contato.
           </p>
         </div>
       </div>

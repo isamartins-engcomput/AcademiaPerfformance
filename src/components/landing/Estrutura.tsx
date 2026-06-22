@@ -40,16 +40,30 @@ export function Estrutura() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-5">
           <div className="reveal group relative overflow-hidden rounded-2xl ring-1 ring-white/5 lg:col-span-3 min-h-[420px]">
+            
+            {/* CAMADA 1: A Imagem Base */}
+            {/* Adicionamos brightness, contrast e grayscale para preparar a base da foto */}
             <img
               src={muscImg}
               alt="Sala de musculação com peso livre e maquinário"
               width={1920}
               height={1080}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-[0.45] contrast-125 grayscale-[30%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-8">
+            
+            {/* CAMADA 2: O Filtro de Cor (Vermelho na esquerda, Azul na direita) */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-red/60 via-transparent to-brand-blue/60 mix-blend-color pointer-events-none transition-opacity duration-700 group-hover:opacity-80" />
+            
+            {/* CAMADA 3: Reforço de Luz Neon */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand-red/20 via-transparent to-brand-blue/20 mix-blend-overlay pointer-events-none" />
+
+            {/* CAMADA 4: Sombra no rodapé para os textos ficarem legíveis */}
+            {/* Ajustei o via-background/40 para background/80 para dar mais peso na base */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+
+            {/* CAMADA 5: Seus Textos (Com z-10 para ficar acima de todos os filtros) */}
+            <div className="absolute inset-x-0 bottom-0 p-8 z-10">
               <div className="text-xs font-semibold uppercase tracking-[0.25em] text-brand-red">
                 Peso livre · Maquinário · Treino pesado
               </div>
